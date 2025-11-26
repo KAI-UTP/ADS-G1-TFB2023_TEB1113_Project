@@ -119,11 +119,11 @@ def print_section(title: str) -> None:
 
 
 def print_success(msg: str) -> None:
-    print(f"✓ {msg}")
+    print(f"[OK] {msg}")
 
 
 def print_error(msg: str) -> None:
-    print(f"✗ {msg}")
+    print(f"[ERROR] {msg}")
 
 
 def read_int(prompt: str, min_val: Optional[int] = None,
@@ -157,7 +157,7 @@ def read_non_empty(prompt: str) -> str:
 if __name__ == "__main__":
     clear_screen()
     print("\n" + "="*60)
-    print("  🏥 FCFS TRIAGE SYSTEM (BASELINE) 🏥")
+    print("  FCFS TRIAGE SYSTEM (BASELINE)")
     print("="*60 + "\n")
 
     arrival_counter = 0
@@ -171,15 +171,15 @@ if __name__ == "__main__":
         print("\n" + "="*60)
         print("  MENU")
         print("="*60)
-        print(" 1. ➕ Add patient")
-        print(" 2. 👤 Serve next patient")
-        print(" 3. 🔍 Show front patient")
-        print(" 4. 🔍 Show rear patient")
-        print(" 5. 📊 Check if queue is full")
-        print(" 6. 📊 Check if queue is empty")
-        print(" 7. 📋 Display entire queue")
-        print(" 8. ℹ️  Queue statistics")
-        print(" 9. 🚪 Exit")
+        print(" 1. Add patient")
+        print(" 2. Serve next patient")
+        print(" 3. Show front patient")
+        print(" 4. Show rear patient")
+        print(" 5. Check if queue is full")
+        print(" 6. Check if queue is empty")
+        print(" 7. Display entire queue")
+        print(" 8. Queue statistics")
+        print(" 9. Exit")
         print("="*60)
         option = read_int("Enter your choice: ", 1, 9)
 
@@ -295,6 +295,6 @@ if __name__ == "__main__":
 
         elif option == 9:
             print("\n" + "="*60)
-            print("  👋 Thank you for using FCFS Triage System!")
+            print("  Thank you for using FCFS Triage System!")
             print("="*60 + "\n")
             break

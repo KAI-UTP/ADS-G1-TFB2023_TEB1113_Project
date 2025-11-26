@@ -1,7 +1,11 @@
 import heapq
+import sys
 from typing import Optional, List, Tuple
 
 from baseline import Patient, FCFSTriageSystem, read_int, read_non_empty, print_success, print_error, print_section
+
+# Increase recursion limit for handling large datasets
+sys.setrecursionlimit(2000)
 
 
 class _DoctorNode:
@@ -264,7 +268,7 @@ if __name__ == "__main__":
     import os
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n" + "="*60)
-    print("  🏥 PRIORITY QUEUE TRIAGE SYSTEM (OPTIMIZED) 🏥")
+    print("  PRIORITY QUEUE TRIAGE SYSTEM (OPTIMIZED)")
     print("="*60 + "\n")
 
     num_docs = read_int("Enter number of doctors in rotation: ", 1)
@@ -291,17 +295,17 @@ if __name__ == "__main__":
         print("\n" + "="*60)
         print("  MENU")
         print("="*60)
-        print(" 1. ➕ Add patient")
-        print(" 2. 📝 Update patient severity")
-        print(" 3. 👤 Serve next patient")
-        print(" 4. 📊 Compare Priority Queue vs FCFS")
-        print(" 5. 📋 Show service history stack")
-        print(" 6. 📤 Pop top history record")
-        print(" 7. 👁️  Peek top history record")
-        print(" 8. 🌳 Show BST Inorder traversal")
-        print(" 9. 🌳 Show BST Preorder traversal")
-        print("10. 🌳 Show BST Postorder traversal")
-        print("11. 🚪 Exit")
+        print(" 1. Add patient")
+        print(" 2. Update patient severity")
+        print(" 3. Serve next patient")
+        print(" 4. Compare Priority Queue vs FCFS")
+        print(" 5. Show service history stack")
+        print(" 6. Pop top history record")
+        print(" 7. Peek top history record")
+        print(" 8. Show BST Inorder traversal")
+        print(" 9. Show BST Preorder traversal")
+        print("10. Show BST Postorder traversal")
+        print("11. Exit")
         print("="*60)
 
         choice = read_int("Enter choice: ", 1, 11)
@@ -440,7 +444,7 @@ if __name__ == "__main__":
 
         elif choice == 11:
             print("\n" + "="*60)
-            print("  👋 Thank you for using Priority Triage System!")
+            print("  Thank you for using Priority Triage System!")
             print("="*60 + "\n")
             break
 
